@@ -9,35 +9,35 @@ import { getRenderedText } from '@angular/core/src/render3';
 export class PostListComponentComponent implements OnInit {
 
   constructor() { }
-  header = 'mon-blog';
-  title2 = 'Mes posts';
-  loveIts= 0;
+ 
+  
   @Input() postTitle : string;
   @Input() postContent: string;
   @Input() postCreatedAt: Date;
+  @Input() postLoveIts: number;
   
   ngOnInit() {
   }
 
   onLoveIt() {
 
-    this.loveIts++
+    this.postLoveIts++
     ;
      }
 
      onDontLoveIt() {
 
-      this.loveIts--
+      this.postLoveIts--
       ;
        }
   
        getColor(){
 
-        if (this.loveIts >0){
+        if (this.postLoveIts >0){
           return  'green'
         } 
         ;
-        if (this.loveIts >0){
+        if (this.postLoveIts <0){
           return  'red'
         } 
        }

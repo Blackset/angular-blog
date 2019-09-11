@@ -1,6 +1,6 @@
 <li [ngClass]="{'list-group-item': true,
-'list-group-item-success': loveIts > 0,
-'list-group-item-danger': loveIts < 0}">
+'list-group-item-success': postLoveIts > 0,
+'list-group-item-danger': postLoveIts < 0}">
 <div class="row">
   <h2 class="col-xs-12 col-md-10" [ngStyle]="{color: getColor()}">{{postTitle}}</h2>
   <h4 class="col-xs-6 col-md-2"><em>{{postCreatedAt | date: 'short' | uppercase}}</em></h4>
